@@ -2,7 +2,7 @@ package com.demo.market.controller;
 
 import com.demo.market.util.ApiResponse;
 import com.demo.market.DTO.ProductDTO;
-import com.demo.market.service.ProductServiceImp;
+import com.demo.market.service.ProductService;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,10 +21,10 @@ public class ProductController {
 //    @Autowired
 //    IProductService productService;
 
-    private final ProductServiceImp productService;
+    private final ProductService productService;
 
     // 建構子注入
-    public ProductController(ProductServiceImp productService) {
+    public ProductController(ProductService productService) {
         this.productService = productService;
     }
 
